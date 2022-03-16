@@ -1,0 +1,23 @@
+{
+  "name": "tiktok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd backend && json-server --port 5000 --watch db.json ",
+    "client": "cd tik-tok && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client-install": "cd tik-tok && npm install",
+    "server-install": "npm install",
+    "install-all": "concurrently \"npm run server-install\" \"npm run client-install\"",
+    "heroku-postbuild": "cd tik-tok && npm install && npm run build"
+  },
+  "keywords": [], 
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "json-server": "^0.17.0"
+  }
+}
